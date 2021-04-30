@@ -1,7 +1,7 @@
 # Sass-Tutorial
 
 ```
-Sass/Scss Practical implementatio using a basic project.
+Sass/Scss Practical implementation using a basic project.
   # nesting concept;
   # parent(&) concept;
   # parcel(@import) concept;
