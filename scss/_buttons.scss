@@ -1,0 +1,36 @@
+@import 'fxns&mixins';
+
+.btn{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+    // color: set-text-color($primary-color);
+    font-weight: 600;
+
+    &:hover{
+        transform: scale(.98);
+    }
+}
+
+.btn-primary{
+    //@extend shows the inheritance concept of scss.
+    //.btn-primary is extending .btn class.
+    @extend .btn;
+    // background-color: lighten($primary-color, 10%);
+    //lighten(color, amt): inbuilt scss fxn to lighten the color.
+    //darken(color, amt): inbuilt scss fxn to darken the color.
+
+    //OR
+
+    //using mixin;
+    @include set-background(lighten($primary-color, 10%));
+
+}
+.btn-secondary{
+    @extend .btn;
+    background-color: $secondary-color;
+    //OR
+    //using mixin;
+    @include set-background($secondary-color);
+}

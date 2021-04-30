@@ -1,0 +1,91 @@
+@import 'variables'; 
+@import 'buttons';
+@import 'fxns&mixins';
+//it is importing vars from _variables.scss file.
+// in scss terms, concept is called parcel.
+//and file name should start with _(underscore).
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-stack;
+    line-height: 1.6;
+    background-color: $light-color;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+.showcase{
+    // background-color: $primary-color;
+    
+    //fxn usage;
+    // color: set-text-color($primary-color);
+
+    //mixin usage;
+    //need to use @include for using mixin;
+    @include set-background($primary-color);
+
+    height: 600px;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+    }
+
+    li{
+        padding: 15px;
+
+        a{
+            color: set-text-color($primary-color);
+        }
+        a:hover{
+            color: $secondary-color;
+        }
+    }
+
+    // & here is showcase( which is parent class)
+    &-content{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            width: 50%;
+        }
+
+        h1{
+            font-size: 50px;
+            line-height: 1.2;
+        }
+        p{
+            margin: 20px 0;
+        }
+    }
+
+    
+}
+
+.container{
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+@import 'mobile';

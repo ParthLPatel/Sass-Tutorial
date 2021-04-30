@@ -1,0 +1,26 @@
+@media screen and (max-width: 700px) {
+    
+    .showcase{
+        height: fit-content;
+        padding-bottom: 2em;
+
+        nav > h1{
+            font-size: 18px;
+        }
+
+
+
+        &-content{
+
+            h1{
+                font-size: 35px;
+                margin-top: 0.7em;
+            }
+            img{
+                display: none;
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+//functions and mixins concept in scss.
+//And if,else concept in scss.
+
+//we will create a fxn that changes text-color based on bg-color.
+@function set-text-color($bgColor){
+
+    @if(lightness($bgColor) > 70) 
+    { //if >70 bgcolor is light
+        @return #000;
+    }@else {
+        // bgcolor is dark
+        @return #fff;
+    }
+}
+
+
+//mixin: 
+// A Sass mixin allows us to take a block of code that we repeat a lot and store it,
+// to be used anywhere we want. 
+@mixin set-background($bgColor) {
+    background-color: $bgColor;
+    color: set-text-color($bgColor);
+}
